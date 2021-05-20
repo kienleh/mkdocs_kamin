@@ -1,0 +1,4 @@
+site_name: MkDocs
+theme:
+  name: null
+  custom_dir: 'cinder'
