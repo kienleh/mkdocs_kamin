@@ -1,4 +1,4 @@
-site_name: MkDocs
+site_name: Dokumentation mit MkDocs
 theme:
   name: null
   custom_dir: 'cinder'

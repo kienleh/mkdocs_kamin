@@ -1,6 +1,6 @@
 # Dokumentation mit MkDocs
 
-[MkDocs](https://www.mkdocs.org/) ist ein Werkzeug zum Erstellen von statischen Webseiten. Der Inhalt der Webseiten wird in [Markdown](https://de.wikipedia.org/wiki/Markdown) beschrieben. MkDocs generiert daraus das Html zur Anzeige im Webbrowser. Man kann sich das in etwa wie das Kompilieren von Quellcode in ein Ausführbares programm vorstellen.
+[MkDocs](https://www.mkdocs.org/) ist ein Werkzeug zum Erstellen von statischen Webseiten. Der Inhalt der Webseiten wird in [Markdown](https://de.wikipedia.org/wiki/Markdown) beschrieben. MkDocs generiert daraus das Html zur Anzeige im Webbrowser. Man kann sich das in etwa wie das Kompilieren von Quellcode in ein ausführbares Programm vorstellen.
 
 Wir setzen MkDocs zur Dokumentation von service pro 365 und allgemeiner Entwicklungsthemen ein.
 
@@ -13,7 +13,7 @@ MkDocs ist in Python geschrieben es läuft auf jeder Plattform auf der Python l�
 
 1. Ich installiere eine Python Umgebung direkt unter Windows 10. Dass das nichts exotisches ist, sieht man, wenn man in eine Powershell einfach mal `python` eingibt. Hat man Python noch nicht intsalliert öffnet sich eine passende Seite im Microsoft Store.
 ![Python im Microsoft Store](./assets/python_store.png)
-Mit hilfe des Python Paketmanagers PIP kann man dann, [wie auf der MkDocs Homepage beschrieben](https://www.mkdocs.org/#installing-mkdocs), MkDocs installieren,
+Mit Hilfe des Python Paketmanagers PIP kann man dann, [wie auf der MkDocs Homepage beschrieben](https://www.mkdocs.org/#installing-mkdocs), MkDocs installieren,
 2. Ich benutze das [Windows-Subsystem für Linux](https://docs.microsoft.com/de-de/windows/wsl/about) um mit MkDocs zu arbeiten. Wir haben eine [Distribution vorbereitet](https://dev.bss-it.de/anleitungen/doku/DokuAnleitung2/) in der alles Nötige zum Bearbeiten der BSS Dokumentationen enthalten ist.
 
 Unsere [Dev Doku](https://dev.bss-it.de/anleitungen/overview/) enthält noch weitere Anleitungen auf denen die Arbeit mit unserer Doku und [Markdown](https://dev.bss-it.de/anleitungen/doku/anwendung/) beschrieben ist.
@@ -40,24 +40,24 @@ Commands:
   serve      Run the builtin development server
 ```
 
-Sehr übersichtlich :-) 
+Sehr übersichtlich ;-) 
 
 ### Ordnerstruktur des Projekts
 
-mit `mkdocs new` gefolgt von einem Ordnernamen erstellt man ein neues Projekt. Wechselt man in den neuen Ordner findet man folgende Struktur.
+Mit `mkdocs new` gefolgt von einem Ordnernamen erstellt man ein neues Projekt. Wechselt man in den neuen Ordner findet man folgende Struktur.
 
 ```
 mkdocs.yml
 docs\index.md
 ```
 
-`mkdocs.yml` enthält die Einstellungen für MkDocs wie Theme Navigationsstruktur. Unsere gerade erst angelegte Projektdatei enthält nur den Titel der Webseite.
+`mkdocs.yml` enthält die Einstellungen für MkDocs wie Theme und Navigationsstruktur. Unsere gerade erst angelegte Projektdatei enthält nur den Titel der Webseite.
 
 ```
 site_name: My Docs
 ```
 
-Der Ordner `docs` enthäden Inhalt der Webseite. Der `new` Befehl hat auch eine erste Seite angelegt.
+Der Ordner `docs` enthält den Inhalt der Webseite. Der `new` Befehl hat auch eine erste Seite angelegt `index.md`.
 
 ```markdown
 # Welcome to MkDocs
@@ -95,7 +95,7 @@ INFO    -  Start watching changes
 INFO    -  Start detecting changes
 ```
 
-Der Aufruf des Befehls `mkdocs serve` im Projektordner erstellt aus meinen Markdown Dateien Html Dokumente und stellt sie per eingebautem Webserver unter der angegebenen Adresse zur Verfügung. Immer wenn ich eine Markdown Datei im Projektordner speichere wird die Webseite neu erstellt und der Browser aktualiert die Ansicht.
+Der Aufruf des Befehls `mkdocs serve` im Projektordner erstellt aus meinen Markdown Dateien Html Dokumente und stellt sie per eingebautem Webserver unter der angegebenen Adresse zur Verfügung. Immer wenn ich eine Markdown Datei im Projektordner speichere wird die Webseite neu erstellt und der Browser aktualisiert die Ansicht.
 
 ![Ausgabe MkDocs Projektvorlage](./assets/mkdocs_template.png)
 
@@ -109,9 +109,25 @@ INFO    -  Building documentation to directory: /mnt/c/Source/mkdocs_kamin/site
 INFO    -  Documentation built in 0.58 seconds
 ```
 
-Das Html für die Webseite wird in den Ordner `site` im Projektverzeichnis generiert. Den Inhalt dieses Ordners muss man jetzt nur noch zum Webhoster seiens Vertrauens hochladen.
+Das Html für die Webseite wird in den Ordner `site` im Projektverzeichnis generiert. 
 
-Bei [Github Pages](https://pages.github.com/) kann man dann auch gleich den Quellcode zur Webseite verwalten.
+```
+site:
+
+assets
+css
+fonts
+img
+index.html
+js
+search
+sitemap.xml
+sitemap.xml.gz
+```
+
+Den Inhalt dieses Ordners muss man jetzt nur noch zum Webhoster seines Vertrauens hochladen.
+
+Bei [Github](https://pages.github.com/) kann man dann auch gleich den Quellcode zur Webseite verwalten.
 
 ## Editor für Markdown
 
